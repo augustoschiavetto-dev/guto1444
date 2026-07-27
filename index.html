@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <title>Guto Schiavetto 1444 — Landing Page Oficial de Campanha</title>
+    
+    <!-- Meta SEO Standard -->
+    <meta name="description" content="[PLACEHOLDER PARA META DESCRIPTION — Resumo estratégico e otimizado da visão de Guto Schiavetto (1444) para a campanha]">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.gutoschiavetto1444.com.br/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gutoschiavetto1444.com.br/">
+    <meta property="og:title" content="Guto Schiavetto 1444 — Landing Page Oficial de Campanha">
+    <meta property="og:description" content="[PLACEHOLDER PARA META DESCRIPTION — Resumo estratégico da visão do candidato]">
+    <meta property="og:image" content="[PLACEHOLDER PARA FOTO — Banner de Compartilhamento Social 1200x630]">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.gutoschiavetto1444.com.br/">
+    <meta property="twitter:title" content="Guto Schiavetto 1444 — Landing Page Oficial de Campanha">
+    <meta property="twitter:description" content="[PLACEHOLDER PARA META DESCRIPTION]">
+    <meta property="twitter:image" content="[PLACEHOLDER PARA FOTO — Banner de Compartilhamento Social 1200x630]">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#0A0A0A',
+                        cardBg: '#121212',
+                        primary: '#FFBC23',
+                        primaryDark: '#E0A100',
+                        accentGray: '#D1D5DB',
+                        darkGray: '#9CA3AF',
+                        borderSutil: 'rgba(255, 255, 255, 0.05)',
+                        borderSutilActive: 'rgba(255, 255, 255, 0.15)',
+                    },
+                    boxShadow: {
+                        glow: '0 0 25px -5px rgba(255, 188, 35, 0.15)',
+                        glowHover: '0 0 35px -5px rgba(255, 188, 35, 0.3)',
+                        glowButton: '0 4px 20px rgba(255, 188, 35, 0.25)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS Styles for Custom Animations and Cursor -->
+    <style type="text/css">
+        body {
+            background-color: #0A0A0A;
+            color: #F9FAFB;
+            overflow-x: hidden;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FFBC23;
+        }
+
+        /* Grid Background Pattern */
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+
+        /* Ambient Glow Shadows */
+        .ambient-glow-yellow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 188, 35, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+            filter: blur(40px);
+            z-index: 0;
+        }
+
+        /* Skeleton Loading pulse animation */
+        .skeleton-loader {
+            background: linear-gradient(90deg, #181818 25%, #242424 50%, #181818 75%);
+            background-size: 200% 100%;
+            animation: loading-pulse 1.5s infinite;
+        }
+        @keyframes loading-pulse {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Cursor Glow (hidden on touch devices) */
+        .custom-cursor {
+            width: 8px;
+            height: 8px;
+            background-color: #FFBC23;
+            border-radius: 50%;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 9999;
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+        }
+        .custom-cursor-follower {
+            width: 32px;
+            height: 32px;
+            border: 1px solid rgba(255, 188, 35, 0.3);
+            border-radius: 50%;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.08s ease-out, width 0.2s, height 0.2s, border-color 0.2s;
+        }
+        @media (pointer: coarse) {
+            .custom-cursor, .custom-cursor-follower {
+                display: none;
+            }
+        }
+
+        /* Scroll Reveal base classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Interactive active link style for desktop header */
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #FFBC23;
+            transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .nav-link.active-section::after {
+            width: 100%;
+        }
+
+        /* Smooth Ripple Effect container */
+        .ripple-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .ripple {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+            pointer-events: none;
+        }
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <!-- Structured Data JSON-LD Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Guto Schiavetto",
+        "jobTitle": "[PLACEHOLDER PARA TITULO — Candidato a Cargo Político]",
+        "identifier": "1444",
+        "knowsAbout": ["[PLACEHOLDER PARA TEMAS — Inovação, Tecnologia, Gestão Pública]"],
+        "url": "https://www.gutoschiavetto1444.com.br/",
+        "image": "[PLACEHOLDER PARA FOTO OFICIAL DO CANDIDATO]"
+      }
+    }
+    </script>
+
+    <!-- Campaign Reusable Components Loader -->
+    <script src="./components.js" defer></script>
+    
+    <!-- Core Application Logic Loader -->
+    <script src="./app.js" defer></script>
+</head>
+<body class="font-sans antialiased bg-darkBg text-gray-100 selection:bg-primary selection:text-darkBg">
+
+    <!-- Custom Cursor elements -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="custom-cursor-follower" id="custom-cursor-follower"></div>
+
+    <!-- Header Component -->
+    <campaign-header></campaign-header>
+
+    <!-- Main Content Area -->
+    <main class="relative z-10 pt-[73px] bg-grid-pattern">
+        
+        <!-- Background Radial Lights -->
+        <div class="ambient-glow-yellow top-[10%] left-[-100px]"></div>
+        <div class="ambient-glow-yellow top-[40%] right-[-150px]"></div>
+        <div class="ambient-glow-yellow top-[80%] left-[-200px]"></div>
+
+        <!-- Campaign Sections Components -->
+        <campaign-hero></campaign-hero>
+        <campaign-manifesto></campaign-manifesto>
+        <campaign-timeline></campaign-timeline>
+        <campaign-proposals></campaign-proposals>
+        <campaign-mandate></campaign-mandate>
+        <campaign-social-proof></campaign-social-proof>
+        <campaign-donation></campaign-donation>
+        <campaign-emissary></campaign-emissary>
+        <campaign-materials></campaign-materials>
+        <campaign-socials></campaign-socials>
+
+    </main>
+
+    <!-- Footer Component -->
+    <campaign-footer></campaign-footer>
+
+    <!-- Lucide Icons Rendering Library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</body>
+</html>
