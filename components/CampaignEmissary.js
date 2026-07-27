@@ -198,7 +198,7 @@ class CampaignEmissary extends HTMLElement {
                                 <!-- Submit Button -->
                                 <button type="submit" class="ripple-btn w-full py-4 bg-primary hover:bg-primaryDark text-darkBg font-bold text-base rounded-xl transition-all duration-300 shadow-glow hover:shadow-glowHover flex items-center justify-center gap-2 focus:ring-2 focus:ring-primary focus:outline-none mt-2">
                                     <span id="submit-btn-spinner" class="hidden w-4 h-4 border-2 border-darkBg border-t-transparent rounded-full animate-spin"></span>
-                                    <span id="submit-btn-text">Quero ser um Emissário</span>
+                                    <span id="submit-btn-text">QUERO ME TORNAR UM EMISSÁRIO!</span>
                                 </button>
 
                             </form>

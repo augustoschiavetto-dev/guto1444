@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
                 .then(response => response.json())
                 .then(data => {
-                    if (submitBtnText) submitBtnText.textContent = "Quero ser um Emissário";
+                    if (submitBtnText) submitBtnText.textContent = "QUERO ME TORNAR UM EMISSÁRIO!";
                     if (spinner) spinner.classList.add('hidden');
                     
                     if (successOverlay) {
@@ -392,7 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
                 .catch(error => {
                     console.error('Erro no envio do formulário:', error);
-                    if (submitBtnText) submitBtnText.textContent = "Quero ser um Emissário";
+                    if (submitBtnText) submitBtnText.textContent = "QUERO ME TORNAR UM EMISSÁRIO!";
                     if (spinner) spinner.classList.add('hidden');
                     
                     // Fallback: garante a exibição da tela de sucesso
