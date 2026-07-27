@@ -179,11 +179,11 @@ class CampaignEmissary extends HTMLElement {
                                     <span class="text-xs text-red-500 mt-1 hidden" id="err-phone">WhatsApp é obrigatório.</span>
                                 </div>
 
-                                <!-- Input Bairro -->
+                                <!-- Input Cidade/Estado -->
                                 <div class="flex flex-col">
-                                    <label for="form-district" class="text-xs font-semibold text-gray-400 uppercase mb-2">Bairro ou Região</label>
-                                    <input type="text" id="form-district" required class="w-full bg-darkBg border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200" placeholder="Ex: Vila Mariana, São Paulo">
-                                    <span class="text-xs text-red-500 mt-1 hidden" id="err-district">Bairro é obrigatório.</span>
+                                    <label for="form-city" class="text-xs font-semibold text-gray-400 uppercase mb-2">Cidade / Estado</label>
+                                    <input type="text" id="form-city" required class="w-full bg-darkBg border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200" placeholder="Ex: Limeira / SP">
+                                    <span class="text-xs text-red-500 mt-1 hidden" id="err-city">Cidade e Estado são obrigatórios.</span>
                                 </div>
 
                                 <!-- LGPD Checkbox -->

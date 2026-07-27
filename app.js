@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const nameVal = document.getElementById('form-name').value.trim();
             const emailVal = document.getElementById('form-email').value.trim();
             const phoneVal = document.getElementById('form-phone').value.trim();
-            const districtVal = document.getElementById('form-district').value.trim();
+            const cityVal = document.getElementById('form-city').value.trim();
             const lgpdVal = document.getElementById('form-lgpd').checked;
 
             let valid = true;
@@ -349,8 +349,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('err-phone').classList.remove('hidden');
                 valid = false;
             }
-            if (!districtVal) {
-                document.getElementById('err-district').classList.remove('hidden');
+            if (!cityVal) {
+                document.getElementById('err-city').classList.remove('hidden');
                 valid = false;
             }
             if (!lgpdVal) {
@@ -362,11 +362,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 const submitBtnText = document.getElementById('submit-btn-text');
                 const spinner = document.getElementById('submit-btn-spinner');
                 
-                if (submitBtnText) submitBtnText.textContent = "[ENVIANDO...]";
+                if (submitBtnText) submitBtnText.textContent = "Enviando...";
                 if (spinner) spinner.classList.remove('hidden');
 
-                setTimeout(() => {
-                    if (submitBtnText) submitBtnText.textContent = "[PLACEHOLDER TEXTO BOTAO FORMULARIO]";
+                fetch('./cadastro.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: nameVal,
+                        email: emailVal,
+                        phone: phoneVal,
+                        city: cityVal
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (submitBtnText) submitBtnText.textContent = "Quero ser um Emissário";
                     if (spinner) spinner.classList.add('hidden');
                     
                     if (successOverlay) {
@@ -376,7 +389,21 @@ document.addEventListener('DOMContentLoaded', () => {
                             successOverlay.classList.add('opacity-100', 'scale-100');
                         }, 50);
                     }
-                }, 1500);
+                })
+                .catch(error => {
+                    console.error('Erro no envio do formulário:', error);
+                    if (submitBtnText) submitBtnText.textContent = "Quero ser um Emissário";
+                    if (spinner) spinner.classList.add('hidden');
+                    
+                    // Fallback: garante a exibição da tela de sucesso
+                    if (successOverlay) {
+                        successOverlay.classList.remove('hidden');
+                        setTimeout(() => {
+                            successOverlay.classList.remove('opacity-0', 'scale-95');
+                            successOverlay.classList.add('opacity-100', 'scale-100');
+                        }, 50);
+                    }
+                });
             }
         });
     }

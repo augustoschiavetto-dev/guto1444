@@ -1,0 +1,4 @@
+<Files "leads.csv">
+    Order Allow,Deny
+    Deny from all
+</Files>
