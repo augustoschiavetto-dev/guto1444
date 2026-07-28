@@ -20,7 +20,7 @@ class CampaignHeader extends HTMLElement {
                     <a href="${pathPrefix}#propostas" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" aria-label="Navegar para Propostas">Propostas</a>
                     <a href="${pathPrefix}#plano" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" aria-label="Navegar para Plano de Mandato">Plano de Mandato</a>
                     <a href="${pathPrefix}#vaquinha" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" aria-label="Navegar para Vaquinha">Vaquinha</a>
-                    <a href="${pathPrefix}#emissario" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" aria-label="Navegar para Seja Emissário">Seja Emissário</a>
+                    <a href="${pathPrefix}#impulsionador" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" aria-label="Navegar para Seja Impulsionador">Seja Impulsionador</a>
                     <a href="${pathPrefix}#materiais" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" aria-label="Navegar para Central de Materiais">Materiais</a>
                 </nav>
 
@@ -45,7 +45,7 @@ class CampaignHeader extends HTMLElement {
                 <a href="${pathPrefix}#propostas" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-white" aria-label="Navegar para Propostas">Propostas</a>
                 <a href="${pathPrefix}#plano" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-white" aria-label="Navegar para Plano de Mandato">Plano de Mandato</a>
                 <a href="${pathPrefix}#vaquinha" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-white" aria-label="Navegar para Vaquinha">Vaquinha</a>
-                <a href="${pathPrefix}#emissario" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-white" aria-label="Navegar para Seja Emissário">Seja Emissário</a>
+                <a href="${pathPrefix}#impulsionador" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-white" aria-label="Navegar para Seja Impulsionador">Seja Impulsionador</a>
                 <a href="${pathPrefix}#materiais" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-white" aria-label="Navegar para Central de Materiais">Materiais</a>
                 <hr class="border-white/10">
                 <a href="${pathPrefix}#vaquinha" class="ripple-btn flex items-center justify-center py-3.5 bg-primary hover:bg-primaryDark text-darkBg font-bold rounded-xl transition-all duration-200 shadow-glow">

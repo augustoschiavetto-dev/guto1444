@@ -25,7 +25,7 @@ class CampaignHeader extends HTMLElement {
                     <a href="${pathPrefix}#propostas" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" aria-label="Navegar para Propostas">Propostas</a>
                     <a href="${pathPrefix}#plano" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" aria-label="Navegar para Plano de Mandato">Plano de Mandato</a>
                     <a href="${pathPrefix}#vaquinha" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" aria-label="Navegar para Vaquinha">Vaquinha</a>
-                    <a href="${pathPrefix}#emissario" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" aria-label="Navegar para Seja Emissário">Seja Emissário</a>
+                    <a href="${pathPrefix}#impulsionador" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" aria-label="Navegar para Seja Impulsionador">Seja Impulsionador</a>
                     <a href="${pathPrefix}#materiais" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" aria-label="Navegar para Central de Materiais">Materiais</a>
                 </nav>
 
@@ -50,7 +50,7 @@ class CampaignHeader extends HTMLElement {
                 <a href="${pathPrefix}#propostas" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-white" aria-label="Navegar para Propostas">Propostas</a>
                 <a href="${pathPrefix}#plano" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-white" aria-label="Navegar para Plano de Mandato">Plano de Mandato</a>
                 <a href="${pathPrefix}#vaquinha" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-white" aria-label="Navegar para Vaquinha">Vaquinha</a>
-                <a href="${pathPrefix}#emissario" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-white" aria-label="Navegar para Seja Emissário">Seja Emissário</a>
+                <a href="${pathPrefix}#impulsionador" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-white" aria-label="Navegar para Seja Impulsionador">Seja Impulsionador</a>
                 <a href="${pathPrefix}#materiais" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-white" aria-label="Navegar para Central de Materiais">Materiais</a>
                 <hr class="border-white/10">
                 <a href="${pathPrefix}#vaquinha" class="ripple-btn flex items-center justify-center py-3.5 bg-primary hover:bg-primaryDark text-darkBg font-bold rounded-xl transition-all duration-200 shadow-glow">
@@ -89,8 +89,8 @@ class CampaignHero extends HTMLElement {
 
                     <!-- CTAs -->
                     <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto reveal">
-                        <a href="#emissario" class="ripple-btn inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primaryDark text-darkBg font-bold text-base rounded-xl transition-all duration-300 shadow-glow hover:shadow-glowHover transform hover:-translate-y-0.5 focus:ring-2 focus:ring-primary focus:outline-none">
-                            Seja um Emissário
+                        <a href="#impulsionador" class="ripple-btn inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primaryDark text-darkBg font-bold text-base rounded-xl transition-all duration-300 shadow-glow hover:shadow-glowHover transform hover:-translate-y-0.5 focus:ring-2 focus:ring-primary focus:outline-none">
+                            Seja um Impulsionador
                         </a>
                         <a href="#propostas" class="ripple-btn inline-flex items-center justify-center px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20 font-semibold text-base rounded-xl transition-all duration-300 backdrop-blur-md transform hover:-translate-y-0.5 focus:ring-2 focus:ring-white/20 focus:outline-none">
                             Conheça as Propostas
@@ -685,11 +685,11 @@ class CampaignDonation extends HTMLElement {
 }
 customElements.define('campaign-donation', CampaignDonation);
 
-// 9. EMISSARY COMPONENT (EXPANDED + FAQ)
-class CampaignEmissary extends HTMLElement {
+// 9. IMPULSIONADOR COMPONENT (EXPANDED + FAQ)
+class CampaignImpulsionador extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <section id="emissario" class="py-24 px-6 relative border-t border-white/5">
+        <section id="impulsionador" class="py-24 px-6 relative border-t border-white/5">
             <div class="max-w-7xl mx-auto">
                 <!-- Top Header -->
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal">
@@ -698,7 +698,7 @@ class CampaignEmissary extends HTMLElement {
                         Multiplique esta ideia.
                     </h2>
                     <p class="text-gray-400 text-lg leading-relaxed">
-                        A verdadeira renovação é descentralizada. Una-se à rede de Emissários e ajude a levar propostas técnicas e éticas mais longe utilizando o ambiente digital.
+                        A verdadeira renovação é descentralizada. Una-se à rede de Impulsionadores e ajude a levar propostas técnicas e éticas mais longe utilizando o ambiente digital.
                     </p>
                 </div>
 
@@ -732,7 +732,7 @@ class CampaignEmissary extends HTMLElement {
 
                         <!-- Benefits checklist -->
                         <div>
-                            <h3 class="font-display font-bold text-xl text-white mb-4">Vantagens de ser Emissário:</h3>
+                            <h3 class="font-display font-bold text-xl text-white mb-4">Vantagens de ser Impulsionador:</h3>
                             <div class="flex flex-col gap-4 w-full">
                                 <div class="flex gap-3">
                                     <div class="w-5 h-5 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
@@ -787,12 +787,12 @@ class CampaignEmissary extends HTMLElement {
                                 <!-- FAQ 2 -->
                                 <div class="faq-item border border-white/5 bg-cardBg/20 rounded-xl overflow-hidden">
                                     <button type="button" class="faq-trigger w-full px-5 py-4 flex items-center justify-between text-left text-sm font-semibold text-white hover:text-primary transition-colors focus:outline-none">
-                                        <span>Como o voluntariado de Emissário ajuda na prática?</span>
+                                        <span>Como o voluntariado de Impulsionador ajuda na prática?</span>
                                         <i data-lucide="chevron-down" class="w-4 h-4 text-gray-500 transition-transform duration-300"></i>
                                     </button>
                                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                                         <p class="px-5 pb-4 text-xs text-gray-400 leading-relaxed">
-                                            Os emissários formam uma rede digital orgânica e de baixo custo. Compartilhando dados técnicos e materiais nas redes, combatemos as estruturas milionárias das campanhas tradicionais com voluntariado consciente.
+                                            Os impulsionadores formam uma rede digital orgânica e de baixo custo. Compartilhando dados técnicos e materiais nas redes, combatemos as estruturas milionárias das campanhas tradicionais com voluntariado consciente.
                                         </p>
                                     </div>
                                 </div>
@@ -844,7 +844,7 @@ class CampaignEmissary extends HTMLElement {
                     <!-- Right: Form (Lead Generation) -->
                     <div class="lg:col-span-6 reveal">
                         <div class="p-8 sm:p-10 rounded-2xl border border-white/5 bg-cardBg/30 backdrop-blur-md shadow-2xl relative">
-                            <form id="emissario-form" class="flex flex-col gap-6" novalidate>
+                            <form id="impulsionador-form" class="flex flex-col gap-6" novalidate>
                                 
                                 <!-- Input Name -->
                                 <div class="flex flex-col">
@@ -886,7 +886,7 @@ class CampaignEmissary extends HTMLElement {
                                 <!-- Submit Button -->
                                 <button type="submit" class="ripple-btn w-full py-4 bg-primary hover:bg-primaryDark text-darkBg font-bold text-base rounded-xl transition-all duration-300 shadow-glow hover:shadow-glowHover flex items-center justify-center gap-2 focus:ring-2 focus:ring-primary focus:outline-none mt-2">
                                     <span id="submit-btn-spinner" class="hidden w-4 h-4 border-2 border-darkBg border-t-transparent rounded-full animate-spin"></span>
-                                    <span id="submit-btn-text">QUERO ME TORNAR UM EMISSÁRIO!</span>
+                                    <span id="submit-btn-text">QUERO ME TORNAR UM IMPULSIONADOR!</span>
                                 </button>
 
                             </form>
@@ -913,7 +913,7 @@ class CampaignEmissary extends HTMLElement {
         `;
     }
 }
-customElements.define('campaign-emissary', CampaignEmissary);
+customElements.define('campaign-impulsionador', CampaignImpulsionador);
 
 // 10. MATERIALS COMPONENT (SEARCH + FILTER)
 class CampaignMaterials extends HTMLElement {

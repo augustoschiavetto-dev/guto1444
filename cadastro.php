@@ -1,6 +1,6 @@
 <?php
 // ==========================================
-// CONFIGURAÇÃO DO CADASTRO DE EMISSÁRIOS (GUTO 1444)
+// CONFIGURAÇÃO DO CADASTRO DE IMPULSIONADORES (GUTO 1444)
 // ==========================================
 
 // 1. Emails para onde serão enviados os dados dos cadastros
@@ -37,8 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     
     // --- 1. ENVIO POR EMAIL ---
-    $subject = "=?UTF-8?B?" . base64_encode("Novo Emissário Cadastrado: $name") . "?=";
-    $message = "Você tem um novo emissário cadastrado na landing page:\n\n";
+    $subject = "=?UTF-8?B?" . base64_encode("Novo Impulsionador Cadastrado: $name") . "?=";
+    $message = "Você tem um novo impulsionador cadastrado na landing page:\n\n";
     $message .= "Nome Completo: $name\n";
     $message .= "E-mail: $email\n";
     $message .= "WhatsApp / Telefone: $phone\n";

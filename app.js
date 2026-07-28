@@ -319,8 +319,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 12. Seja um Emissário Form validations and success trigger
-    const form = document.getElementById('emissario-form');
+    // 12. Seja um Impulsionador Form validations and success trigger
+    const form = document.getElementById('impulsionador-form');
     const successOverlay = document.getElementById('form-success-overlay');
 
     if (form) {
@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
                 .then(response => response.json())
                 .then(data => {
-                    if (submitBtnText) submitBtnText.textContent = "QUERO ME TORNAR UM EMISSÁRIO!";
+                    if (submitBtnText) submitBtnText.textContent = "QUERO ME TORNAR UM IMPULSIONADOR!";
                     if (spinner) spinner.classList.add('hidden');
                     
                     if (successOverlay) {
@@ -392,7 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
                 .catch(error => {
                     console.error('Erro no envio do formulário:', error);
-                    if (submitBtnText) submitBtnText.textContent = "QUERO ME TORNAR UM EMISSÁRIO!";
+                    if (submitBtnText) submitBtnText.textContent = "QUERO ME TORNAR UM IMPULSIONADOR!";
                     if (spinner) spinner.classList.add('hidden');
                     
                     // Fallback: garante a exibição da tela de sucesso

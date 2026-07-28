@@ -23,8 +23,8 @@ class CampaignHero extends HTMLElement {
 
                     <!-- CTAs -->
                     <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto reveal">
-                        <a href="#emissario" class="ripple-btn inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primaryDark text-darkBg font-bold text-base rounded-xl transition-all duration-300 shadow-glow hover:shadow-glowHover transform hover:-translate-y-0.5 focus:ring-2 focus:ring-primary focus:outline-none">
-                            Seja um Emissário
+                        <a href="#impulsionador" class="ripple-btn inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primaryDark text-darkBg font-bold text-base rounded-xl transition-all duration-300 shadow-glow hover:shadow-glowHover transform hover:-translate-y-0.5 focus:ring-2 focus:ring-primary focus:outline-none">
+                            Seja um Impulsionador
                         </a>
                         <a href="#propostas" class="ripple-btn inline-flex items-center justify-center px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20 font-semibold text-base rounded-xl transition-all duration-300 backdrop-blur-md transform hover:-translate-y-0.5 focus:ring-2 focus:ring-white/20 focus:outline-none">
                             Conheça as Propostas
